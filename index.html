@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/video.js/dist/video-js.css">
+    <style>
+        #player {
+            width: 640px;
+            height: 480px;
+        }
+    </style>
+    <title>videojs-dash-live-streaming</title>
+</head>
+
+<body>
+    <video id="player" class="video-js vjs-default-skin" controls></video>
+    <script src="node_modules/video.js/dist/video.js"></script>
+    <script>
+        var player = videojs('player');
+
+        player.src({
+            src: "https://srg2-accountdigitalinnovation-euwe.streaming.media.azure.net/3f17705e-954c-449f-b2f9-21786485668b/269fa71b-c34c-467a-ab3e-908cd37c640b.ism/manifest(format=mpd-time-csf)",
+            type: "application/dash+xml"
+        });
+    </script>
+</body>
+
+</html>
