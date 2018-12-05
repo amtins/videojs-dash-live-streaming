@@ -22,17 +22,19 @@
 
 <body>
     <div>
-        <h1>videojs 7.2.4</h1>
+        <h1>videojs</h1>
         <video id="player" class="player video-js vjs-default-skin" controls></video>
     </div>
     <script src="node_modules/video.js/dist/video.js"></script>
     <script>
         var player = videojs('player');
-        
+
         player.src({
-            src: "https://srg2-accountdigitalinnovation-euwe.streaming.media.azure.net/3f17705e-954c-449f-b2f9-21786485668b/269fa71b-c34c-467a-ab3e-908cd37c640b.ism/manifest(format=mpd-time-csf)",
+            src: "https://wowzaec2demo.streamlock.net/live/bigbuckbunny/manifest_mpm4sav_mvtime.mpd",
             type: "application/dash+xml"
         });
+        document.querySelector('h1').textContent = `videojs ${videojs.VERSION}`;
+
     </script>
 
 </body>

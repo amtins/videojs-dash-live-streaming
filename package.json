@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/amtins/videojs-dash-live-streaming#readme",
   "dependencies": {
-    "video.js": "^7.2.4"
+    "video.js": "7.4.0"
   }
 }
