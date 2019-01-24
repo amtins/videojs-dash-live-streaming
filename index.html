@@ -24,6 +24,9 @@
     <div>
         <h1>videojs</h1>
         <video id="player" class="player video-js vjs-default-skin" controls></video>
+
+        <h2>Browser properties</h2>
+        <pre></pre>
     </div>
     <script src="node_modules/video.js/dist/video.js"></script>
     <script>
@@ -34,7 +37,24 @@
             type: "application/dash+xml"
         });
         document.querySelector('h1').textContent = `videojs ${videojs.VERSION}`;
-
+        document.querySelector('pre').textContent = `
+ANDROID_VERSION : ${videojs.browser.ANDROID_VERSION}
+CHROME_VERSION : ${videojs.browser.CHROME_VERSION}
+IE_VERSION : ${videojs.browser.IE_VERSION}
+IOS_VERSION : ${videojs.browser.IOS_VERSION}
+IS_ANDROID : ${videojs.browser.IS_ANDROID}
+IS_ANY_SAFARI : ${videojs.browser.IS_ANY_SAFARI}
+IS_CHROME : ${videojs.browser.IS_CHROME}
+IS_EDGE : ${videojs.browser.IS_EDGE}
+IS_FIREFOX : ${videojs.browser.IS_FIREFOX}
+IS_IOS : ${videojs.browser.IS_IOS}
+IS_IPAD : ${videojs.browser.IS_IPAD}
+IS_IPHONE : ${videojs.browser.IS_IPHONE}
+IS_IPOD : ${videojs.browser.IS_IPOD}
+IS_NATIVE_ANDROID : ${videojs.browser.IS_NATIVE_ANDROID}
+IS_SAFARI : ${videojs.browser.IS_SAFARI}
+TOUCH_ENABLED : ${videojs.browser.TOUCH_ENABLED}
+    `;
     </script>
 
 </body>
